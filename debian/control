@@ -1,0 +1,27 @@
+Source: node-merge
+Section: web
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Daniel Pocock <daniel@pocock.pro>
+Build-Depends: debhelper (>= 9.0.0), node-uglify
+Standards-Version: 3.9.5
+Homepage: https://github.com/yeikos/js.merge
+Vcs-Browser: https://github.com/dpocock/merge
+Vcs-Git: https://github.com/dpocock/merge
+
+Package: libjs-merge
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: javascript-common
+Description: JavaScript utility for merging multiple objects into one.
+ Merge multiple objects into one, optionally creating a new cloned object.
+ Similar to the jQuery.extend but more flexible. Works in Node.js and
+ the browser.
+
+Package: node-merge
+Architecture: all
+Depends: ${misc:Depends}, nodejs (>= 0.6.19~dfsg1-3), libjs-merge
+Description: JavaScript utility for merging multiple objects into one.
+ Merge multiple objects into one, optionally creating a new cloned object. 
+ Similar to the jQuery.extend but more flexible. Works in Node.js and 
+ the browser.
